@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+    <div class="footer-wrapper">
+        <footer>
+            <div class="sec-1">
+                <a href="{% url 'Features:Home' %}"><div class="logo-box">SF SPOTIFY</div></a>
+                <div class="footer-text"> This Website is made as a <a href="https://www.starticfield.com/cto-hunt">CTO HUNT</a> solution 
+                    (for Round 2). <br>
+                    For Round 1 solution: <a href="https://github.com/Anirudh3167/SF_SPOTIFY">SF SPOTIFY</a><br>
+                    Round 2 solution(current): <a href="{% url 'Features:Home' %}">SF SPOTIFY</a><br><br>
+                    #<a href="https://www.starticfield.com/aboutUs">Startic Field</a> &nbsp;
+                    #<a href="https://www.starticfield.com/cto-hunt">CTO Hunt </a></div>
+            </div>
+            <div class="sec-2">
+                <div class="title-section"> Quick Links </div>
+                <a href="{% url 'Features:UnderDevelopment' %}">Feedback</a>
+                <a href="{% url 'Features:UnderDevelopment' %}">Remix Seperator</a>
+                <a href="{% url 'Features:UnderDevelopment' %}">Auto Stop</a>
+                <a href="{% url 'Features:UnderDevelopment' %}">Lyrics Translation</a>
+                <a href="{% url 'Features:UnderDevelopment' %}">Equilizer</a>
+            </div>
+            <div class="sec-3">
+                <div class="title-section"> More Info </div>
+                <a href="https://www.starticfield.com/aboutUs">About Startic Field</a>
+                <a href="https://www.starticfield.com/cto-hunt">CTO Hunt 2022</a>
+                <a href="{% url 'Features:UnderDevelopment' %}">Site mapping</a>
+                <a href="{% url 'Features:UnderDevelopment' %}">Embedding it to Spotify</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

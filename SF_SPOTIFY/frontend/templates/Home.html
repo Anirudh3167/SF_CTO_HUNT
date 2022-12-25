@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF SPOTIFY | HOME </title>
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="ultra-wrapper">
+        <div class="feature-container">
+
+            <div class="feature-box">
+                <a href="{% url 'Features:Feature' 1 %}"> <div class="feature-heading"> Feedback </div></a>
+                <div class="market-analysis"> Feature 1 </div>
+            </div>
+
+            <div class="feature-box">
+                <a href="{% url 'Features:Feature' 2 %}"> <div class="feature-heading"> Remix Seperator </div></a>
+                <div class="market-analysis"> Feature 2 </div>
+            </div>
+            
+            <div class="feature-box">
+                <a href="{% url 'Features:Feature' 3 %}"> <div class="feature-heading"> Auto Stop </div></a>
+                <div class="market-analysis"> Feature 3 </div>
+            </div>
+            
+            <div class="feature-box">
+                <a href="{% url 'Features:Feature' 4 %}"> <div class="feature-heading"> Lyrics Translation </div></a>
+                <div class="market-analysis"> Feature 4 </div>
+            </div>
+            
+            <div class="feature-box">
+                <a href="{% url 'Features:Feature' 5 %}"> <div class="feature-heading"> Equilizer </div></a>
+                <div class="market-analysis"> Feature 5 </div>
+            </div>
+        </div>
+        <div class="ploy-box-A"> </div>
+        <div class="ploy-box-B"> </div>
+        <div class="ploy-box-A"> </div>
+        <div class="ploy-box-B"> </div>
+        <div class="ploy-box-A"> </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

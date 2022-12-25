@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ featureName }} | SF SPOTIFY</title>
+</head>
+<body>
+    {% include 'feature_navbar.html' %}
+    <div class="ultra-wrap">
+        {% if id == "1" %}
+        {% include 'feature_1_home.html' %}
+        {% else %}
+        This is other feature.<br>
+        Id: {{ id }}
+        {% endif %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

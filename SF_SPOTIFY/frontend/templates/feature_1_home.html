@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{featureName }} | SF SPOTIFY</title>
+    <link rel="stylesheet" href="{% static 'css/feature_1_home.css' %}">
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="form-create">
+            <form action="" method="POST" id="form-1">
+                    {% csrf_token %}
+                    <div class="main-ques-wrap">
+                    </div>
+                    <button type="button" class="add-ques" onclick="addQues()"> Add Ques + </button>
+
+                <div class="form-btns">
+                    <button type="submit" class="form-btn"> Submit </button>
+                    <button type="button" class="form-cancel" onclick="cancelform()"> Cancel </button>
+                </div>
+            </form>
+            <button onclick="createform()" id="create-btn"> New Form </button>
+        </div>
+        <div class="prev-forms-wrap">
+            <div class="prev-forms">
+                <div class="head">Previous Forms:-</div> <br>
+                <ul>
+                    <li><a href="{% url 'Features:Home' %}"> FEEDBACK 1</a></li>
+                    <li><a href="{% url 'Features:Home' %}">FEEDBACK 2</a></li>
+                    <li><a href="{% url 'Features:Home' %}"> FEEDBACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var x = document.getElementById("form-1");
+    var y = document.getElementById("create-btn");
+    var z = document.getElementsByClassName("main-ques-wrap")[0];
+    var ques = 0;
+    function createform() {
+        y.style.display = "none";
+        x.style.display = "flex";
+    }
+    function cancelform() {
+        y.style.display = "flex";
+        x.style.display = "none";
+    }
+    function addQues() {
+        z.innerHTML =  z.innerHTML + `<div class="question-wrap" id="${ques}">
+                            <div class="remove">
+                                <button type="button" onclick="removeQues(${ques})"> X </button>
+                        <div class="questions" id="Q${ques}">
+                            <label for="q_1"> Question:</label>
+                            <input type="text" name="q_1">
+                        </div>
+                        <div class="option-1">
+                            <label for="opt_1"> Option 1:</label>
+                            <input type="text" name="opt_1">                     
+                        </div>
+                        <div class="option-2">
+                            <label for="opt_2"> Option 2:</label>
+                            <input type="text" name="opt_2">                     
+                        </div>
+                        <div class="option-3">
+                            <label for="opt_3"> Option 3:</label>
+                            <input type="text" name="opt_3">                     
+                        </div>
+                        <div class="option-4">
+                            <label for="opt_4"> Option 4:</label>
+                            <input type="text" name="opt_4">                     
+                        </div>
+                    </div>`;
+        ques = ques + 1;
+    }
+    function removeQues(ques) {
+        var e = document.getElementById(ques);
+        e.remove();
+    }
+</script>
+</html>

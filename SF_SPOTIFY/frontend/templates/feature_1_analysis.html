@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Feedback | SF SPOTIFY</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .ultra-wrap {
+            display: flex;
+            min-height:70vh;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .head {
+            font-size:22px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    {% include 'feature_navbar.html' %}
+    <div class="ultra-wrap">
+        <div class="head">Market Competitors:</div>
+        Although there are many commpetitors but Google Opinion Rewards is the biggest.
+        <div class="head"> Opportunities: </div>
+        Normal surveying is so costly. So small survey companies can afford spotify.<br>
+        Also with this feature Spotify can expect a income growth nearly about 5-10% of its total revenue.
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

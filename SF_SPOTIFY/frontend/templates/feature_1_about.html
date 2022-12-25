@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Feedback | SF SPOTIFY</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .main-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        .feedback {
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .need {
+            margin:10px;
+            margin-left: 15px;
+        }
+        .how-it-works {
+            margin:10px;
+            margin-left: 15px;
+        }
+        .head {
+            font-size:24px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    {% include 'feature_navbar.html' %}
+    <div class="main-wrap">
+        <div class="feedback">
+            <div class="title"> Feedback </div>
+            <div class="need">
+                <div class="head">Need:-</div>
+                Why should the spotify users always listen only?<br>
+                We are providing an option now for users to speak via Feedback. <br>
+                Not only from user point of view but also form the spotify side it is very much helpful
+                for the Spotify to know what the user actually needs.
+            </div>
+            <div class="how-it-works">
+                <div class="head">How it Works:-</div>
+                Spotify has its custom feedback section where it can create the form and ask the user about
+                the spotify experience. <br>
+            </div>
+        </div>
+        <div class="Survey-form">
+            <div class="title"> Surveys </div>
+            <div class="need">
+                <div class="head">Need:-</div>
+                This section of spotify will act like a mediator between the survey company and the user.
+            </div>
+            <div class="how-it-works">
+                <div class="head">How it works:-</div>
+                A survey company will approach Spotify and made a contract with Spotify. <br><br>
+                Let's assume that the survey company pays 0.5INR for each 10 survey reports.<br>
+                Now the spotify will pay the user 20% of this 0.05INR for spending their time and filling the form. <br>
+                This also encourages the web3 features.<br><br>
+                Some details like name, email, phone no. is autofilled form spotify as it already stores the data.<br>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
